@@ -1,0 +1,1053 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Para ti ❤️</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #080808;
+        color: white;
+        font-family: "Segoe UI", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+
+    /* =========================
+       INICIO
+    ========================= */
+
+    .inicio {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .contenedor {
+        max-width: 520px;
+    }
+
+    .corazon {
+        font-size: 70px;
+        animation: latido 1.5s infinite;
+        filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
+    }
+
+    h1 {
+        font-size: 46px;
+        margin: 20px 0 15px;
+    }
+
+    .subtitulo {
+        color: #aaa;
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    button {
+        margin-top: 30px;
+        padding: 15px 35px;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        background: transparent;
+        color: white;
+        font-size: 16px;
+    }
+
+    .boton-entrar {
+        cursor: pointer;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .boton-entrar:hover {
+        transform: scale(1.05);
+    }
+
+    .boton-entrar:active {
+        transform: scale(0.95);
+    }
+
+    .boton-entrar::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        background: rgba(255,255,255,0.15);
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    .boton-entrar:active::after {
+        width: 300px;
+        height: 300px;
+    }
+
+
+    /* =========================
+       SECCIONES
+    ========================= */
+
+    section {
+        min-height: 100vh;
+        padding: 90px 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenido {
+        max-width: 620px;
+    }
+
+    p {
+        color: #ccc;
+        font-size: clamp(17px, 4.5vw, 19px);
+        line-height: 1.85;
+        margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       TITULOS
+    ========================= */
+
+    h2 {
+        font-size: clamp(32px, 8vw, 46px);
+        font-weight: 400;
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+        margin-bottom: 35px;
+    }
+
+
+    /* =========================
+       FECHA
+    ========================= */
+
+    .fecha {
+        color: #777;
+        font-size: 14px;
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       MICRÓFONO
+    ========================= */
+
+    .momento {
+        background: #050505;
+    }
+
+    .microfono {
+        font-size: 60px;
+        margin-bottom: 35px;
+    }
+
+    .pequeno {
+        color: #777;
+        font-size: 15px;
+        letter-spacing: 4px;
+    }
+
+    .momento h2 {
+        font-size: 44px;
+    }
+
+    .frase-gris {
+        color: #777;
+    }
+
+
+    /* =========================
+       FRASES
+    ========================= */
+
+    .frase-grande {
+        font-size: 30px;
+        color: white;
+        margin: 60px 0;
+    }
+
+
+    /* =========================
+       POCO A POCO
+    ========================= */
+
+    .poco {
+        background: #0b0b0b;
+    }
+
+
+    /* =========================
+       SIN DARME CUENTA
+    ========================= */
+
+    .esencial {
+        background: #070707;
+    }
+
+
+    /* =========================
+       PRIMER ENCUENTRO
+    ========================= */
+
+    .encuentro {
+        background: #0a0a0a;
+    }
+
+    .encuentro h2 {
+        margin-bottom: 5px;
+    }
+
+    .encuentro h3 {
+        font-size: 50px;
+        margin-bottom: 50px;
+    }
+
+    .encuentro-final {
+        color: #aaa;
+    }
+
+
+    /* =========================
+       CUATRO MESES
+    ========================= */
+
+    .cuatro-meses {
+        background: #0b0b0b;
+    }
+
+    .numero-meses {
+        color: #777;
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+
+    .frase-especial {
+        font-size: 31px;
+        color: white;
+        margin: 60px 0;
+    }
+
+    .final-meses {
+        margin-top: 70px;
+        font-size: 23px;
+        color: white;
+    }
+
+
+    /* =========================
+       FUTURO
+    ========================= */
+
+    .futuro {
+        background: #060606;
+    }
+
+    .futuro-final {
+        font-size: 30px;
+        color: white;
+        margin-top: 60px;
+    }
+
+
+    /* =========================
+       CARTA FINAL
+    ========================= */
+
+    .carta {
+        background: #050505;
+    }
+
+    .carta h2 {
+        font-size: 34px;
+    }
+
+    .carta-final {
+        margin-top: 70px;
+    }
+
+    .te-amo {
+        font-size: 38px;
+        color: white;
+        margin-top: 60px;
+    }
+
+
+    /* =========================
+       FINAL DE LA HISTORIA
+    ========================= */
+
+    .final-historia {
+        margin-top: 120px;
+        padding-bottom: 40px;
+        animation: aparecerFinal 2s ease;
+    }
+
+    .pregunta-final {
+        font-size: 30px;
+        line-height: 1.5;
+        color: white;
+        max-width: 500px;
+        margin: 0 auto 35px;
+    }
+
+    .fecha-final {
+        color: #666;
+        font-size: 13px;
+        letter-spacing: 4px;
+        margin: 0;
+    }
+
+
+    /* =========================
+       ANIMACIONES
+    ========================= */
+
+    .contenido > * {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .contenido > *.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @keyframes latido {
+
+        0%, 100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.15);
+        }
+
+    }
+
+    @keyframes aparecerFinal {
+
+        from {
+            opacity: 0;
+            transform: translateY(35px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+
+    /* =========================
+       CELULARES
+    ========================= */
+
+    @media (max-width: 480px) {
+
+        section {
+            padding: 80px 22px;
+        }
+
+        .inicio {
+            padding: 25px 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+        }
+
+        .momento h2 {
+            font-size: 38px;
+        }
+
+        .encuentro h3 {
+            font-size: 42px;
+        }
+
+        .frase-grande {
+            font-size: 26px;
+            line-height: 1.5;
+        }
+
+        .frase-especial {
+            font-size: 27px;
+        }
+
+        .te-amo {
+            font-size: 32px;
+        }
+
+        .pregunta-final {
+            font-size: 26px;
+        }
+
+    }
+
+</style>
+
+</head><body><!-- =========================
+     INICIO
+========================= -->
+
+<section class="inicio">
+
+    <div class="contenedor">
+
+        <div class="corazon">
+            ❤️
+        </div>
+
+        <h1>
+            Para ti
+        </h1>
+
+        <p class="subtitulo">
+            Hay cosas que son difíciles de explicar
+            con palabras...
+            así que decidí hacerte algo.
+        </p>
+
+        <button
+            class="boton-entrar"
+            onclick="mostrarHistoria()">
+
+            Abrir mi carta ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     10 DE ABRIL
+========================= -->
+
+<section>
+
+    <div class="contenido">
+
+        <div class="fecha">
+            10 · ABRIL · 2026
+        </div>
+
+        <h2>
+            El día que comenzó todo
+        </h2>
+
+        <p>
+            Ese día probablemente ninguno de los dos
+            imaginaba todo lo que vendría después.
+        </p>
+
+        <p>
+            Pero fue el día en que nuestras historias
+            comenzaron a cruzarse.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MICRÓFONO
+========================= -->
+
+<section class="momento">
+
+    <div class="contenido">
+
+        <div class="microfono">
+            🎙️
+        </div>
+
+        <p class="pequeno">
+            Y entonces...
+        </p>
+
+        <h2>
+            Prende el micrófono.
+        </h2>
+
+        <p class="frase-gris">
+            Algo tan simple terminó cambiándolo todo.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONEXIÓN
+========================= -->
+
+<section>
+
+    <div class="contenido">
+
+        <p>
+            Cuando comenzamos a hablar sentí esa
+            conexión contigo.
+        </p>
+
+        <p>
+            Realmente fue algo muy diferente a todo
+            lo que había vivido con las demás personas
+            que había conocido.
+        </p>
+
+        <p>
+            Porque tú me entendiste, me seguiste el juego
+            y, sin darme cuenta, comenzaste a hacer que
+            todo se sintiera diferente.
+        </p>
+
+        <p>
+            Y fue ahí cuando algo tan simple como decirte:
+        </p>
+
+        <p class="frase-grande">
+            “Prende el micrófono.”
+        </p>
+
+        <p>
+            terminó cambiándolo todo.
+        </p>
+
+        <p>
+            No paro de pensar en qué habría pasado si
+            aquel día no me hubiera atrevido a prender
+            el micrófono y decirte a ti que lo prendieras.
+        </p>
+
+        <p>
+            En serio...
+        </p>
+
+        <p>
+            Qué bonito es pensar que algo tan pequeño
+            pudo terminar llevándome hasta ti. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     POCO A POCO
+========================= -->
+
+<section class="poco">
+
+    <div class="contenido">
+
+        <h2>
+            Y poco a poco...
+        </h2>
+
+        <p>
+            Cada día que transcurría, cada llamada y cada
+            conversación en la que hablábamos de todo lo
+            que nos había pasado durante el día, o incluso
+            de cosas que habíamos vivido a lo largo de
+            nuestras vidas, iba creando momentos únicos.
+        </p>
+
+        <p>
+            Sin darnos cuenta, esas conversaciones
+            comenzaron a convertirse en algo especial.
+        </p>
+
+        <p>
+            Hacían que los días fueran menos pesados
+            de lo que habían sido.
+        </p>
+
+        <p class="frase-grande">
+            Se trataba de que quería seguir
+            compartiendo mis días contigo. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SIN DARME CUENTA
+========================= -->
+
+<section class="esencial">
+
+    <div class="contenido">
+
+        <h2>
+            Y sin darme cuenta...
+        </h2>
+
+        <p>
+            Conforme pasaban los días, me sentía más feliz,
+            más contento, más entusiasmado.
+        </p>
+
+        <p>
+            Solo quería salir del trabajo y llegar lo más
+            rápido posible a casa para poder hablar contigo.
+        </p>
+
+        <p>
+            Esos momentos de hacer llamada, escucharte
+            reír o reírnos los dos, sentirnos en confianza
+            y poder ser nosotros mismos sin ningún problema...
+            eso es lo que más me gustó y lo que me sigue
+            gustando de ti.
+        </p>
+
+        <p>
+            Poco a poco te volviste esencial en mi vida.
+        </p>
+
+        <p>
+            Y no supe exactamente en qué momento pasó,
+            pero cuando me di cuenta, ya no podía estar sin ti.
+        </p>
+
+        <p>
+            Quería saber de ti, qué hacías, cómo estabas,
+            por qué no respondías...
+        </p>
+
+        <p>
+            Y sinceramente, nunca pensé que llegaría
+            a conocerte en persona.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRIMER ENCUENTRO
+========================= -->
+
+<section class="encuentro">
+
+    <div class="contenido">
+
+        <p>
+            Verte fue algo increíble.
+        </p>
+
+        <p>
+            Algo inimaginable.
+        </p>
+
+        <p>
+            Neta, no creí que estuviese pasando.
+            Fue como cuando te propones algo durante
+            mucho tiempo y, cuando finalmente lo logras,
+            solamente puedes pensar:
+        </p>
+
+        <p class="frase-grande">
+            “Sí se pudo.”
+        </p>
+
+        <p>
+            Estuve muy nervioso. Sudaba más de lo normal
+            y, siendo sincero, era porque neta te veías
+            hermosa.
+        </p>
+
+        <p>
+            Tan preciosa como te imaginé.
+        </p>
+
+        <p>
+            Después de tantas llamadas, tantas conversaciones
+            y tantos días esperando ese momento, por fin
+            estabas frente a mí.
+        </p>
+
+        <p>
+            Y aunque quizá las cosas no salieron exactamente
+            como las imaginamos, para mí ese momento
+            significó muchísimo.
+        </p>
+
+        <h2>
+            Pero pues...
+        </h2>
+
+        <h3>
+            míranos ahora.
+        </h3>
+
+        <p class="encuentro-final">
+            Después de todo lo que comenzó con una simple
+            llamada, ahora hasta nos vamos a volver a ver. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CUATRO MESES
+========================= -->
+
+<section class="cuatro-meses">
+
+    <div class="contenido">
+
+        <p class="numero-meses">
+            04 · MESES
+        </p>
+
+        <h2>
+            Cuatro meses...
+        </h2>
+
+        <p>
+            ¿Por dónde empiezo?
+        </p>
+
+        <p>
+            Llevo queriendo que pase el tiempo, pero no
+            lejos de ti, sino cerca de ti, contigo.
+        </p>
+
+        <p>
+            Me has enseñado muchas cosas y he aprendido
+            de ti. Me haces sentir que todo está bien
+            cuando realmente todo es un caos por fuera.
+        </p>
+
+        <p class="frase-especial">
+            Eres mi salvación.
+        </p>
+
+        <p>
+            Y cuando discutimos, siento que todo ese caos
+            vuelve y no puedo estar igual.
+        </p>
+
+        <p>
+            Agradezco a la vida por tenerte conmigo,
+            porque gracias a ti puedo caminar hacia adelante
+            y mirar mucho más allá, imaginar un futuro
+            contigo, de tu mano y caminando juntos.
+        </p>
+
+        <p>
+            Hemos vivido tanto...
+        </p>
+
+        <p>
+            Y aunque gran parte de ello ha sido a distancia,
+            para mí vale mucho más de lo que crees.
+        </p>
+
+        <p class="final-meses">
+            Cuatro meses contigo.
+            <br><br>
+            Y todavía siento que apenas estamos comenzando. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FUTURO
+========================= -->
+
+<section class="futuro">
+
+    <div class="contenido">
+
+        <h2>
+            Y esto apenas comienza...
+        </h2>
+
+        <p>
+            Después de todo lo que hemos vivido,
+            hay algo que tengo muy claro:
+        </p>
+
+        <p>
+            No quiero que nuestra historia termine aquí.
+        </p>
+
+        <p>
+            Quiero seguir conociéndote, seguir escuchándote
+            reír, seguir teniendo esas llamadas que hacen
+            que los días sean un poquito más fáciles.
+        </p>
+
+        <p>
+            Quiero seguir creando momentos contigo.
+        </p>
+
+        <p>
+            Sé que la distancia no siempre ha sido fácil
+            y que no todo ha salido como lo imaginábamos.
+        </p>
+
+        <p>
+            Pero también sé que seguimos aquí.
+        </p>
+
+        <p>
+            Y eso, para mí, significa muchísimo.
+        </p>
+
+        <p>
+            Ahora tenemos otra oportunidad de vernos.
+            Otra salida.
+            Otro momento que podemos convertir
+            en un recuerdo.
+        </p>
+
+        <p>
+            Y esta vez quiero disfrutarlo contigo,
+            sin pensar demasiado en lo que pueda pasar después.
+        </p>
+
+        <p>
+            Solo quiero estar ahí.
+        </p>
+
+        <p class="frase-grande">
+            Contigo.
+        </p>
+
+        <p>
+            Porque si algo he aprendido durante estos cuatro
+            meses es que no necesito saber exactamente qué
+            nos espera para querer caminar hacia adelante.
+        </p>
+
+        <p class="futuro-final">
+            Solo sé que quiero hacerlo...
+            <br><br>
+            de tu mano. ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CARTA FINAL
+========================= -->
+
+<section class="carta">
+
+    <div class="contenido">
+
+        <h2>
+            Por último, pero no menos importante...
+        </h2>
+
+        <p>
+            Quiero que sepas que no me importa esperar
+            el tiempo que sea necesario para poder estar juntos.
+        </p>
+
+        <p>
+            Porque sé que, si los dos lo queremos y lo
+            decretamos, todo esto puede seguir y durar
+            por muchos años más.
+        </p>
+
+        <p>
+            Y si algún día todo llegara a terminar,
+            quiero que sepas algo:
+        </p>
+
+        <p class="frase-grande">
+            Nunca te dejaría de amar.
+        </p>
+
+        <p>
+            Siempre te llevaría en mis pensamientos y
+            siempre serías el motivo de mí...
+        </p>
+
+        <p>
+            De mis sonrisas, de mis ganas, de mis momentos
+            felices, de todo lo bonito que me pase.
+        </p>
+
+        <p>
+            Espero poder verte nuevamente y que te des
+            cuenta de que lo que siento por ti no solamente
+            se queda en textos o en una pantalla.
+        </p>
+
+        <p>
+            Quiero que lo sientas también cuando esté
+            frente a ti.
+        </p>
+
+        <p>
+            Te amo tanto que no tienes idea de cuánto
+            esperé por ti.
+        </p>
+
+        <p>
+            Esperé a que llegaras.
+        </p>
+
+        <p>
+            Y, sinceramente, siento que eres tú.
+        </p>
+
+        <p>
+            La persona con la que estoy destinado a quedarme.
+        </p>
+
+        <p>
+            A menos que tú no sientas lo mismo que yo...
+        </p>
+
+        <p>
+            Aunque lo dudo. 😂
+        </p>
+
+        <p>
+            Nadie se resiste a mí.
+        </p>
+
+        <p class="te-amo">
+            Te amo, mi princesita bella. ❤️
+        </p>
+
+
+        <!-- =========================
+             PREGUNTA FINAL
+        ========================= -->
+
+        <div class="final-historia">
+
+            <p class="pregunta-final">
+                ¿Quieres seguir escribiendo esta historia conmigo?
+            </p>
+
+            <p class="fecha-final">
+                10 · 04 · 2026 — ∞
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    function mostrarHistoria() {
+
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    const elementos =
+        document.querySelectorAll(".contenido > *");
+
+
+    const observador =
+        new IntersectionObserver(
+
+            function(entradas) {
+
+                entradas.forEach(
+                    function(entrada) {
+
+                        if (entrada.isIntersecting) {
+
+                            entrada.target.classList.add(
+                                "visible"
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+
+            {
+                threshold: 0.15
+            }
+
+        );
+
+
+    elementos.forEach(
+        function(elemento) {
+
+            observador.observe(elemento);
+
+        }
+    );
+
+</script>
+
+</body></htm
