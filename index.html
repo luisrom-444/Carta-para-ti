@@ -844,9 +844,33 @@ footer{
 
     <button onclick="toggleMusic()" id="musicBtn">▶</button>
 
-    <audio id="myMusic">
+    <div class="music-player">
+    <button onclick="toggleMusic()" id="musicBtn">▶️ Escuchar nuestra canción</button>
+
+    <audio id="Mymusic" preload="auto">
         <source src="ÁNGEL.mp3" type="audio/mpeg">
+        Tu navegador no puede reproducir este audio.
     </audio>
+</div>
+
+<script>
+const music = document.getElementById("Mymusic");
+const button = document.getElementById("musicBtn");
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        button.textContent = "⏸️ Pausar nuestra canción";
+    } else {
+        music.pause();
+        button.textContent = "▶️ Escuchar nuestra canción";
+    }
+}
+
+music.addEventListener("ended", () => {
+    button.textContent = "▶️ Escuchar nuestra canción";
+});
+</script>
 </div>
     <div class="infinity">∞</div>
 
